@@ -16,8 +16,8 @@ const app = express();
 // === CORS ===
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://cajerojonas.netlify.app",
-  "https://caja-backend-jonas.onrender.com",
+  "https://mulaplateada.netlify.app",
+  "https://mulaplateada-backend.onrender.com",
 ];
 
 app.use(
