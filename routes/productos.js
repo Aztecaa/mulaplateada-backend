@@ -14,14 +14,14 @@ router.post("/", (req, res) => {
         codigo = "",
         nombre = "",
         precio = 0,
-        cantidadUnidadesSueltas = 0,
+        cantidad = 0,
     } = req.body;
 
     if (!codigo || !nombre) {
         return res.status(400).json({ ok: false, msg: "Faltan datos obligatorios" });
     }
 
-    cantidadUnidadesSueltas = Number(cantidadUnidadesSueltas) || 0;
+    cantidad = Number(cantidad) || 0;
     precio = Number(precio) || 0;
 
     // Buscar si ya existe
@@ -29,7 +29,7 @@ router.post("/", (req, res) => {
 
     if (existente) {
         // Si existe, solo sumamos unidades y actualizamos precio
-        existente.cantidadUnidadesSueltas += cantidadUnidadesSueltas;
+        existente.cantidad += cantidad;
         existente.precio = precio;
     } else {
         // Si no existe, lo agregamos
@@ -37,7 +37,7 @@ router.post("/", (req, res) => {
             codigo,
             nombre,
             precio,
-            cantidadUnidadesSueltas,
+            cantidad,
         });
     }
 

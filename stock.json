@@ -1,8 +1,20 @@
 [
   {
-    "codigo": "123",
-    "nombre": "Rumba",
-    "precio": 5,
-    "cantidadUnidadesSueltas": 10
+    "codigo": "1",
+    "nombre": "Medialuna",
+    "precio": 1500,
+    "cantidadUnidadesSueltas": 19
+  },
+  {
+    "codigo": "2",
+    "nombre": "Mafalda",
+    "precio": 3500,
+    "cantidadUnidadesSueltas": 9997
+  },
+  {
+    "codigo": "3",
+    "nombre": "Cortado",
+    "precio": 3500,
+    "cantidadUnidadesSueltas": 9999
   }
 ]

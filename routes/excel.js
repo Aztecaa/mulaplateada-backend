@@ -13,7 +13,7 @@ router.post("/", upload.single("file"), async (req, res) => {
     if (!req.file) return res.status(400).json({ error: "Archivo no recibido" });
 
     const msg = {
-        to: "superjonas202@gmail.com",/* "aztecaned@gmail.com",*/
+        to: /* "superjonas202@gmail.com",*/"aztecaned@gmail.com",
         from: process.env.USER_EMAIL,
         subject: `📘 Reporte Excel - ${req.body.user}`,
         text: `Adjunto el reporte de cierre de caja del ${req.body.fecha}.`,

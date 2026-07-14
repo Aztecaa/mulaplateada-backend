@@ -1,2 +1,67 @@
+# ====================== DEPENDENCIAS ======================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ====================== ENTORNO ======================
 .env
-node_modules
+.env.local
+.env.development
+.env.test
+.env.production
+.env*.local
+
+# ====================== BUILD / DIST ======================
+dist/
+build/
+out/
+*.min.js
+*.bundle.js
+
+# ====================== LOGS Y TEMP ======================
+logs/
+*.log
+tmp/
+temp/
+*.tmp
+
+# ====================== BASE DE DATOS ======================
+*.sqlite
+*.sqlite3
+*.db
+/data/*.json
+/database/*.db
+
+# ====================== ARCHIVOS SENSIBLES ======================
+*.key
+*.pem
+*.cert
+*.crt
+secrets*
+credentials*
+config/local.*
+config/secrets.*
+
+# ====================== GIT Y EDITORES ======================
+.gitignore
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ====================== TESTING ======================
+coverage/
+.nyc_output/
+jest-coverage/
+
+# ====================== OTROS ======================
+*.rar
+*.zip
+*.tar.gz
+public/uploads/*.jpg
+public/uploads/*.png
