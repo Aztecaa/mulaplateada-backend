@@ -17,18 +17,13 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",
   "https://mulaplateada.netlify.app",
+  "https://www.mulaplateada.netlify.app",
   "https://mulaplateada-backend.onrender.com",
 ];
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin) return callback(null, true);
-      if (!allowedOrigins.includes(origin)) {
-        return callback(new Error("CORS no permite este origen: " + origin), false);
-      }
-      return callback(null, true);
-    },
+    origin: true,                    // permite todos los orígenes (temporal)
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
